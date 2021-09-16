@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'NA')
 DEBUG = False
 
 # ALLOWED_HOSTS = ['127.0.0.1', 'localhost', ]
-ALLOWED_HOSTS = ['.herokuapp.com', ]
+ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1', 'localhost', ]
 # CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
@@ -155,4 +155,6 @@ AUTH_USER_MODEL = 'todo.AppUser'
 
 LOGOUT_REDIRECT_URL = '/'
 
-CORS_ORIGIN_WHITELIST = []
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+]
