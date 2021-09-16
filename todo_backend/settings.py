@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'NA')
 DEBUG = False
 
 # ALLOWED_HOSTS = ['127.0.0.1', 'localhost', ]
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://api-daily-todo-backend.herokuapp.com/']
 # CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
