@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        {% if tasks %}
+        <ul>
+            {% for task in  tasks %}
+                <li>
+                    <p><strong>User {{task.user.username}} : <a href="{% url 'todo:update-task'  task.id %}" style="text-decoration: none;">{{task.title}}</a> :- </strong>
+                    {{task.task}}
+                    ----Created at : {{task.created_at}}----
+                        {% if task.completed %}
+                            &#9989;
+                            ----Completed at : {{task.updated_at}}
+                        {% else %}
+                            &#10060;
+                        {% endif %}
+                        ---- <a href="{% url 'todo:delete-task' task.id %}" style="font-size: 30px; text-decoration: none;">&#128465;</a>
+                    </p>
+                </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        
+        {% if form %}
+            <form method="post" action="">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit">{{button}}</button>
+            </form>
+        {% else %}
+            <a href="{% url 'todo:create-task' %}">Create Task</a>
+        {% endif %}
+        
+    </div>
+{% endblock content %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+    {% if user.is_authenticated %}
+        <h1>welcome <a href="{% url 'todo:update-user' %}">{{user.username}}</a></h1>
+        <a href="{% url 'todo:list-task' %}">View Tasks</a>
+    {% else %}
+        <h1>Welcome Hooman</h1>
+    {% endif %}
+{% endblock content %}
