@@ -157,4 +157,5 @@ LOGOUT_REDIRECT_URL = '/'
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
+    'https://your-only-todo.herokuapp.com',
 ]
