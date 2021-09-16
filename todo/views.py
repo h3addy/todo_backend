@@ -127,9 +127,10 @@ class ToDoTaskDelete(LoginRequiredMixin, generic.DeleteView):
 
 class UsersList(APIView):
     def get(self, request, format=None):
-        users = AppUser.objects.all()
-        serializer = AppUserSerializer(users, many=True)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+        # users = AppUser.objects.all()
+        # serializer = AppUserSerializer(users, many=True)
+        # return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(status=status.HTTP_403_FORBIDDEN)
 
     def post(self, request, format=None):
         accessToken = generateAccessToken()

@@ -21,7 +21,7 @@ urlpatterns = [
 
 
     # APIs
-    # path('api-users/', UsersList.as_view(), name='api-users'),
+    path('api-users/', UsersList.as_view(), name='api-users'),
     path('api-users/<username>/', UserDetails.as_view(), name='api-users-details'),
     path('api-user/login/<username>/', UserLoginAPI.as_view(), name='api-user-login'),
     path('api-todos/<user>/', ToDoListView.as_view(), name='api-todos'),
