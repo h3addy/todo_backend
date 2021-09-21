@@ -35,25 +35,25 @@
 
 **_ Users logged in to the app can make below requests _**
 
-Task Related ::
+- Task Related ::
 
-\* **Todo List ( /user-tasks/<user> )** -
+  \* **Todo List ( /user-tasks/<user> )** -
 
-1. GET :- fetch user's task list
-   a. if valid user returns "200 - OK"
-   b. if invalid user returns "403 - Forbidden"
-2. POST :- add new task to the user's task list
-   a. if valid user and task added returns "201 - Created"
-   b. if invalid user returns "403 - Forbidden"
-   c. if task not added returns "400 - Bad Request"
-3. DELETE :- deletes all the tasks of that user
-   a. if valid user and tasks deleted returns "204 - No Content"
-   b. if invalid user returns "403 - Forbidden"
-4. Error returns "404 - Not Found"
+  1. GET :- fetch user's task list
+     a. if valid user returns "200 - OK"
+     b. if invalid user returns "403 - Forbidden"
+  2. POST :- add new task to the user's task list
+     a. if valid user and task added returns "201 - Created"
+     b. if invalid user returns "403 - Forbidden"
+     c. if task not added returns "400 - Bad Request"
+  3. DELETE :- deletes all the tasks of that user
+     a. if valid user and tasks deleted returns "204 - No Content"
+     b. if invalid user returns "403 - Forbidden"
+  4. Error returns "404 - Not Found"
 
-\* **ToDo Details ( /user-tasks/<user>/<pk> )** -
+  \* **ToDo Details ( /user-tasks/<user>/<pk> )** -
 
-1. GET :- fetch details of that task for logged in user. returns "200 -OK"
-2. PUT :- update task details returns "200 - OK"
-3. DELETE :- delete that particular task. returns "204 - No Content"
-4. Erros :- return "403 - Forbidden" or "400 - Bad Request" or "404 - Not Found"
+  1. GET :- fetch details of that task for logged in user. returns "200 -OK"
+  2. PUT :- update task details returns "200 - OK"
+  3. DELETE :- delete that particular task. returns "204 - No Content"
+  4. Erros :- return "403 - Forbidden" or "400 - Bad Request" or "404 - Not Found"
